@@ -10,9 +10,9 @@ def check_q1(mean_value, data):
     )
     exec(_64.decode())
 
-def run_check(check_q1, mean_value, data):
+def run_check(mean_value, data):
     result = widgets.HTML()
-
+    
     try:
         check_q1(mean_value, data)
         message = "✅ <b>Correct!</b>"
