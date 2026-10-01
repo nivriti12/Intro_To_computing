@@ -92,3 +92,49 @@ def check_q1(answer):
         "YXNzZXJ0IGFuc3dlciA9PSAiYXJyYXkiCg=="
     )
     exec(_64.decode())
+
+def numpy_module_p2():
+    message = """
+
+    <p> Now, let's look at an actual array, and explore its characteristics. </p> 
+
+    <p> This is an example of a 1-D array. Its <b> size <b> is the number of elements the array contains, in this case, five. 
+    The <b> dimension size <b> is the number of axes it has, which would be one, being a 1-D array. The <b> shape <b> specifies the number of elements
+    per each axis, written in the form rows x columns (therefore applying to 2-D arrays). Lastly, its <b> type <b> is the type of elements in the 
+    array, which would be integers in this case. </p>
+
+
+    """
+
+    border = 'black'
+    
+    result = widgets.HTML()
+    
+    result.value = f"""
+    <div style="padding:10px; border:2px solid {border}; border-radius:6px;">
+        {message}
+    </div>
+    """
+
+    display(result)
+    import ipywidgets as widgets
+    from IPython.display import display
+    
+    values = [4, 6, 8, 10, 12]
+
+    boxes = []
+    
+    for value in values:
+        box = widgets.Button(
+            description=str(value),
+            disabled=True,
+            layout=widgets.Layout(
+                width="70px",
+                height="55px"
+            )
+        )
+        boxes.append(box)
+
+    array_display = widgets.HBox(boxes)
+
+    display(array_display)
