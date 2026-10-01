@@ -54,6 +54,8 @@ def numpy_module_q1():
     have to change the information once you store the data. What should you
     store it with?
     </p>
+
+    Choose your answer from the dropdown menu, but do <b> not <b> re run the previous cell again, or it will remove your answer.
     """
 
     result = widgets.HTML()
