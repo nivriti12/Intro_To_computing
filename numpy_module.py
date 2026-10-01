@@ -41,6 +41,7 @@ def numpy_module_p1():
     display(result)
 
 def numpy_module_q1():
+    
     import ipywidgets as widgets
     from IPython.display import display
 
