@@ -9,6 +9,7 @@ import ipywidgets as widgets
 from IPython.display import display
 
 def run_check(check_function, *args):
+    from numpy_module.py import *args
     
     question_id = (
         check_function.__module__,
@@ -53,7 +54,7 @@ def run_check(check_function, *args):
 
     try:
         # Run whichever checker was passed into run_check
-        check_q1(*args)
+        *args()
 
         message = "✅ <b>Correct!</b>"
         border = "green"
