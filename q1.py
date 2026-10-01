@@ -10,7 +10,7 @@ def check_q1(mean_value, data):
     )
     exec(_64.decode())
 
-def run_check(check_q1, *args):
+def run_check(check_q1, data):
     result = widgets.HTML()
 
     try:
