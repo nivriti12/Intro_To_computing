@@ -40,23 +40,30 @@ def numpy_module_p1():
 
     display(result)
 
-def numpy_module_q1():
-    
-    import ipywidgets as widgets
-    from IPython.display import display
-    
-    message = """
+import base64 as _b64
+import ipywidgets as widgets
+from IPython.display import display
 
-    Q1) Imagine that you are working in a neuroscience lab, and have been asked to store numerical neural spike information 
-    to do analysis on. You will not have to change the information once you store the data. What should you store it with?
-    
+
+def numpy_module_q1():
+
+    message = """
+    <p>
+    Q1) Imagine that you are working in a neuroscience lab, and have been asked
+    to store numerical neural spike information to do analysis on. You will not
+    have to change the information once you store the data. What should you
+    store it with?
+    </p>
     """
-    border = 'black'
-    
+
     result = widgets.HTML()
-    
+
     result.value = f"""
-    <div style="padding:10px; border:2px solid {border}; border-radius:6px;">
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
         {message}
     </div>
     """
@@ -64,26 +71,16 @@ def numpy_module_q1():
     display(result)
 
     answer = widgets.Dropdown(
-    options=[
-        ("Select an answer", None),
-        ("List", "list"),
-        ("Tuple", "tuple"),
-        ("Array", "array")
-    ],
-    value=None,
-    description="Answer:"
+        options=[
+            ("Select an answer", None),
+            ("List", "list"),
+            ("Tuple", "tuple"),
+            ("Array", "array")
+        ],
+        value=None,
+        description="Answer:"
     )
 
     display(answer)
 
-def check_q1(answer.value):
-    _64 = _b64.b64decode(
-        "YXNzZXJ0IGFuc3dlciA9PSAiYXJyYXkiCg=="
-    )
-    exec(_64.decode())
-
-    
-    
-
-
-
+    return answer
