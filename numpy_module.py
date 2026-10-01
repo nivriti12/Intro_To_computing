@@ -9,7 +9,7 @@
 import ipywidgets as widgets
 from IPython.display import display
 
-def numpy_module():
+def numpy_module_p1():
     message = """
 
     <p> Welcome to the first numpy module! Here, we will learn about arrays represented in python.</p> 
@@ -19,7 +19,8 @@ def numpy_module():
 
     <p>Using Python, you can create N-Dimensional arrays, which have a fixed size, and are homogenous 
     (meaning that they only contain a singular data type). For example, you could have an array of only string 
-    objects, or one of only integers, but not one containing both.</p> 
+    objects, or one of only integers, but not one containing bothOn the other hand, lists do not have a fixed size, and can be heterogenous (while tuples 
+    have a fixed size, and are heterogenous). </p> 
 
     <p>The numpy module also offers powerful mathematical functions for operating on arrays containing numbers.</p> 
 
@@ -38,6 +39,10 @@ def numpy_module():
     """
 
     display(result)
+
+def numpy_module_q1():
+    
+    
 
 
 
