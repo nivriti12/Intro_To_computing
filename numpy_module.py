@@ -44,6 +44,24 @@ def numpy_module_q1():
     
     import ipywidgets as widgets
     from IPython.display import display
+    
+    message = """
+
+    Q1) Imagine that you are working in a neuroscience lab, and have been asked to store numerical neural spike information 
+    to do analysis on. You will not have to change the information once you store the data. What should you store it with?
+    
+    """
+    border = 'black'
+    
+    result = widgets.HTML()
+    
+    result.value = f"""
+    <div style="padding:10px; border:2px solid {border}; border-radius:6px;">
+        {message}
+    </div>
+    """
+
+    display(result)
 
     answer = widgets.Dropdown(
     options=[
