@@ -1,16 +1,13 @@
 MAX_ATTEMPTS = 3
 
-# Stores attempts/status separately for each question
 _question_state = {}
 
-import base64 as _b64
-import numpy as np
 import ipywidgets as widgets
 from IPython.display import display
 
+
 def run_check(check_function, *args):
-    from numpy_module.py import *args
-    
+
     question_id = (
         check_function.__module__,
         check_function.__name__
@@ -27,8 +24,6 @@ def run_check(check_function, *args):
 
     result = widgets.HTML()
 
-    # Don't allow more checks after correct answer
-    # or after 3 failed attempts
     if state["finished"]:
 
         if state["correct"]:
@@ -53,8 +48,8 @@ def run_check(check_function, *args):
         return
 
     try:
-        # Run whichever checker was passed into run_check
-        *args()
+
+        check_function(*args)
 
         message = "✅ <b>Correct!</b>"
         border = "green"
@@ -65,7 +60,6 @@ def run_check(check_function, *args):
     except AssertionError:
 
         state["attempts"] += 1
-
         remaining = MAX_ATTEMPTS - state["attempts"]
 
         if remaining > 0:
@@ -87,7 +81,6 @@ def run_check(check_function, *args):
 
     except Exception as e:
 
-        # Grader errors do NOT use an attempt
         message = (
             f"⚠️ <b>Grader error:</b> "
             f"{type(e).__name__}: {e}"
@@ -106,4 +99,3 @@ def run_check(check_function, *args):
     """
 
     display(result)
-
