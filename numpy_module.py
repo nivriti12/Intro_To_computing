@@ -76,7 +76,11 @@ def numpy_module_q1():
 
     display(answer)
 
-
+def check_q1(answer.value):
+    _64 = _b64.b64decode(
+        "YXNzZXJ0IGFuc3dlciA9PSAiYXJyYXkiCg=="
+    )
+    exec(_64.decode())
 
     
     
