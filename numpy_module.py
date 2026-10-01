@@ -41,6 +41,24 @@ def numpy_module_p1():
     display(result)
 
 def numpy_module_q1():
+    import ipywidgets as widgets
+    from IPython.display import display
+
+    answer = widgets.Dropdown(
+    options=[
+        ("Select an answer", None),
+        ("List", "list"),
+        ("Tuple", "tuple"),
+        ("Array", "array")
+    ],
+    value=None,
+    description="Answer:"
+    )
+
+    display(answer)
+
+
+
     
     
 
