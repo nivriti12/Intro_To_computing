@@ -12,18 +12,18 @@ from IPython.display import display
 def numpy_module():
     message = """
 
-    Welcome to the first numpy module! Here, we will learn about arrays represented in python. 
+    <p> Welcome to the first numpy module! Here, we will learn about arrays represented in python.</p> 
 
-    NumPy (Numerical Python) is a Python library designed for working with numerical data 
-    in Python. It is widely used in scientific computing, data analysis, and machine learning.
+    <p> NumPy (Numerical Python) is a Python library designed for working with numerical data 
+    in Python. It is widely used in scientific computing, data analysis, and machine learning.</p>
 
-    Using Python, you can create N-Dimensional arrays, which have a fixed size, and are homogenous 
+    <p>Using Python, you can create N-Dimensional arrays, which have a fixed size, and are homogenous 
     (meaning that they only contain a singular data type). For example, you could have an array of only string 
-    objects, or one of only integers, but not one containing both. 
+    objects, or one of only integers, but not one containing both.</p> 
 
-    The numpy module also offers powerful mathematical functions for operating on arrays containing numbers. 
+    <p>The numpy module also offers powerful mathematical functions for operating on arrays containing numbers.</p> 
 
-    In this course, we will focus on only 1-Dimensional and 2-Dimensional arrays.
+    <p>In this course, we will focus on only 1-Dimensional and 2-Dimensional arrays.</p>
 
     """
 
