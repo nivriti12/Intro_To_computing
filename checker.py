@@ -6,7 +6,7 @@ import ipywidgets as widgets
 from IPython.display import display
 
 
-def run_check(check_function, *args):
+def run_check(check_function, answer):
 
     question_id = (
         check_function.__module__,
@@ -49,7 +49,7 @@ def run_check(check_function, *args):
 
     try:
 
-        check_function(*args)
+        check_function(answer)
 
         message = "✅ <b>Correct!</b>"
         border = "green"
