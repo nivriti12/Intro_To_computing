@@ -1,3 +1,6 @@
+MAX_ATTEMPTS = 3
+_attempts = 0
+_finished = False
 
 import base64 as _b64
 import numpy as np
