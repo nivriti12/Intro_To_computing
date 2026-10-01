@@ -29,7 +29,7 @@ def numpy_module():
 
     border = 'black'
 
-     result.value = f"""
+    result.value = f"""
     <div style="padding:10px; border:2px solid {border}; border-radius:6px;">
         {message}
     </div>
