@@ -98,7 +98,7 @@ def numpy_module_p2():
     <p> Now, let's look at an actual array, and explore its characteristics. </p> 
 
     <p> This is an example of a 1-D array. Its <b> size </b> is the number of elements the array contains, in this case, five. 
-    The <b> dimension size <b/> is the number of axes it has, which would be one, being a 1-D array. The <b> shape </b> specifies the number of elements
+    The <b> dimension size </b> is the number of axes it has, which would be one, being a 1-D array. The <b> shape </b> specifies the number of elements
     per each axis, written in the form rows x columns (therefore applying to 2-D arrays). Lastly, its <b> type </b> is the type of elements in the 
     array, which would be integers in this case. </p>
 
