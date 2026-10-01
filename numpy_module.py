@@ -94,6 +94,9 @@ def check_q1(answer):
     exec(_64.decode())
 
 def numpy_module_p2():
+    
+    import ipywidgets as widgets
+    from IPython.display import display
     message = """
 
     <p> Now, let's look at an actual array, and explore its characteristics. </p> 
@@ -117,8 +120,6 @@ def numpy_module_p2():
     """
 
     display(result)
-    import ipywidgets as widgets
-    from IPython.display import display
     
     values = [4, 6, 8, 10, 12]
 
