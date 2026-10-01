@@ -41,8 +41,6 @@ def numpy_module_p1():
     display(result)
 
 import base64 as _b64
-import ipywidgets as widgets
-from IPython.display import display
 
 
 def numpy_module_q1():
@@ -95,8 +93,6 @@ def check_q1(answer):
 
 def numpy_module_p2():
     
-    import ipywidgets as widgets
-    from IPython.display import display
     message = """
 
     <p> Now, let's look at an actual array, and explore its characteristics. </p> 
