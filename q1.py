@@ -8,13 +8,6 @@ import numpy as np
 import ipywidgets as widgets
 from IPython.display import display
 
-
-def check_q1(answer):
-    _64 = _b64.b64decode(
-        "YXNzZXJ0IGFuc3dlciA9PSAiYXJyYXkiCg=="
-    )
-    exec(_64.decode())
-
 def run_check(check_function, *args):
     
     question_id = (
