@@ -100,7 +100,7 @@ def numpy_module_p2():
     <p> This is an example of a 1-D array. Its <b> size </b> is the number of elements the array contains, in this case, five. 
     The <b> dimension size </b> is the number of axes it has, which would be one, being a 1-D array. The <b> shape </b> specifies the number of elements
     per each axis, written in the form rows x columns (therefore applying to 2-D arrays). Lastly, its <b> type </b> is the type of elements in the 
-    array, which would be integers in this case. </p>
+    array. </p>
 
 
     """
@@ -135,3 +135,11 @@ def numpy_module_p2():
     array_display = widgets.HBox(boxes)
 
     display(array_display)
+
+    message_2 = """ <p> Size: 5 </p> 
+    <p> Dimension Size: 1 </p>
+    <p> Shape: (5,) </p>
+    <p> Type: int64 (meaning that it is an integer) </p>
+    """
+
+    display(widgets.HTML(value=message_2))
