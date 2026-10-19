@@ -127,25 +127,25 @@ def numpy_module_p2():
 
     boxes = []
     
-for value in values:
-    box = widgets.HTML(
-        value=f"""
-        <div style="
-            width: 70px;
-            height: 55px;
-            border: 1px solid gray;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: red;
-            font-weight: bold;
-            font-size: 18px;
-        ">
-            {value}
-        </div>
-        """
-    )
-    boxes.append(box)
+    for value in values:
+        box = widgets.HTML(
+            value=f"""
+            <div style="
+                width: 70px;
+                height: 55px;
+                border: 1px solid gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: red;
+                font-weight: bold;
+                font-size: 18px;
+            ">
+                {value}
+            </div>
+            """
+        )
+        boxes.append(box)
 
     array_display = widgets.HBox(boxes)
 
