@@ -129,7 +129,7 @@ def numpy_module_p2():
     
     for value in values:
         box = widgets.Button(
-            description=str(value),
+            description= <span style="color: red;"> str(value) </span>,
             disabled=True,
             layout=widgets.Layout(
                 width="70px",
