@@ -11,7 +11,9 @@ from IPython.display import display
 
 def numpy_module_p1():
     message = """
-
+    
+    <div style="line-height: 1.3;">
+    
     <p> Welcome to the first numpy module! Here, we will learn about arrays represented in python.</p> 
 
     <p> NumPy (Numerical Python) is a Python library designed for working with numerical data 
@@ -26,6 +28,8 @@ def numpy_module_p1():
 
     <p>In this course, we will focus on only 1-Dimensional and 2-Dimensional arrays.</p>
 
+    </div>
+    
     """
 
     border = 'black'
@@ -47,13 +51,15 @@ def numpy_module_q1():
 
     message = """
     <p>
+    <div style="line-height: 1.3;">
     Q1) Imagine that you are working in a neuroscience lab, and have been asked
     to store numerical neural spike information to do analysis on. You will not
     have to change the information once you store the data. What should you
     store it with?
     </p>
-
+    
     Choose your answer from the dropdown menu, but do <b> not </b> re run the previous cell again, or it will remove your answer.
+    </div>
     """
 
     result = widgets.HTML()
