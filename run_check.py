@@ -19,7 +19,8 @@
     "        border = \"green\"\n",
     "\n",
     "    except AssertionError:\n",
-    "        message = \"❌ <b>Incorrect. Try again.</b>\"\n",
+    "        message = \"❌ <b>Incorrect. Try again. Think about whether the data type of the elements 
+    " are all the same, and whether or not the data should be modified after input. </b>\"\n",
     "        border = \"red\"\n",
     "\n",
     "    except Exception as e:\n",
