@@ -248,11 +248,10 @@ def numpy_module_p4():
                 </div>
                 """
             )
-            boxes.append(box)
+                boxes.append(box)
 
-    array_display = widgets.HBox(boxes)
-
-    display(array_display)
+                array_display = widgets.HBox(boxes)
+                display(array_display)
 
 message_2 = """ <p> Size: 10 </p> 
     <p> Dimension Size: 2 </p>
