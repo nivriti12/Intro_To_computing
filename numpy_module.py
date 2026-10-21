@@ -173,14 +173,39 @@ def numpy_module_p3():
     </div> 
 
     """
+    result = widgets.HTML()
+
+    result.value = f"""
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
+        {message}
+    </div>
+    """
+    
     import ipywidgets as widgets
     from IPython.display import display
 
     response = widgets.Textarea(
-        placeholder="Type your answer here...",
-        description="Answer:",
+        placeholder="Enter your response here...",
         layout=widgets.Layout(width="100%", height="150px")
     )
 
-    display(response)
+    submit = widgets.Button(
+        description="Save Answer"
+    )
+
+    saved_answer = widgets.Output()
+
+    def save_answer(b):
+        with saved_answer:
+            saved_answer.clear_output()
+            print(response.value)
+
+    submit.on_click(save_answer)
+
+    display(response, submit, saved_answer)
+
     
