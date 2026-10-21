@@ -224,6 +224,18 @@ def numpy_module_p4():
     <p>
     """
 
+    result = widgets.HTML()
+
+    result.value = f"""
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
+        {message}
+    </div>
+    """
+
     values = [[4, 6, 8, 10, 12],
           [4, 5, 2, 1, 5]]
 
@@ -266,9 +278,90 @@ def numpy_module_p4():
 
     display(widgets.HTML(value=message_2))
 
-
-    
 def numpy_module_p5():
+    
+    message = """
+    <div style="line-height: 1.3;">
+
+    <p>
+
+    The next aspect of arrays to learn is indexing - how to access individual objects within each array. In multidimmensional arrays, the individual array forms rows,
+    while the elements across them form columns. Therefore, to index, you specify the row and column position in the following format:
+
+    array_name[row_position, column_position]
+    </p>
+     <p>
+
+     Take a look at the same 2D arary from the previous example again, and click on each element to reveal its index. 
+    </p>   
+    </div>
+    """
+
+    result = widgets.HTML()
+
+    result.value = f"""
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
+        {message}
+    </div>
+    """
+
+    import ipywidgets as widgets
+    from IPython.display import display
+
+    values = [
+    [4, 6, 8, 10, 12],
+    [4, 5, 2, 1, 5]
+    ]
+
+    rows = []
+    index_output = widgets.Output()
+
+    def button_clicked(button):
+        for row in rows:
+            for b in row.children:
+                b.style.button_color = None
+
+        button.style.button_color = "yellow"
+
+        with index_output:
+            index_output.clear_output()
+            print("Index:", button.index)
+
+    for row_index, value in enumerate(values):
+
+        boxes = []
+
+        for col_index, i in enumerate(value):
+
+            box = widgets.Button(
+                description=str(i),
+                layout=widgets.Layout(
+                    width="70px",
+                    height="55px"
+                )
+            )
+
+            box.index = (row_index, col_index)
+
+            box.on_click(button_clicked)
+
+            boxes.append(box)
+
+        row = widgets.HBox(boxes)
+        rows.append(row)
+
+
+    array_display = widgets.VBox(rows)
+
+    display(array_display)
+    display(index_output)
+    
+    
+def numpy_module_p6():
     import ipywidgets as widgets
     from IPython.display import display
     
