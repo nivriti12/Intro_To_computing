@@ -253,13 +253,13 @@ def numpy_module_p4():
                 array_display = widgets.HBox(boxes)
                 display(array_display)
 
-message_2 = """ <p> Size: 10 </p> 
+    message_2 = """ <p> Size: 10 </p> 
     <p> Dimension Size: 2 </p>
     <p> Shape: (2, 5) </p>
     <p> Type: int64 (meaning that it is an integer) </p>
     """
 
-display(widgets.HTML(value=message_2))
+    display(widgets.HTML(value=message_2))
 
 
     
