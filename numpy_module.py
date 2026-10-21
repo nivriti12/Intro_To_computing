@@ -173,6 +173,9 @@ def numpy_module_p3():
     </div> 
 
     """
+    import ipywidgets as widgets
+    from IPython.display import display
+    
     result = widgets.HTML()
 
     result.value = f"""
@@ -185,8 +188,6 @@ def numpy_module_p3():
     </div>
     """
     
-    import ipywidgets as widgets
-    from IPython.display import display
 
     response = widgets.Textarea(
         placeholder="Enter your response here...",
