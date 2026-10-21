@@ -223,6 +223,8 @@ def numpy_module_p4():
 
     <p>
     """
+    import ipywidgets as widgets
+    from IPython.display import display
 
     result = widgets.HTML()
 
@@ -296,7 +298,8 @@ def numpy_module_p5():
     </p>   
     </div>
     """
-
+    import ipywidgets as widgets
+    from IPython.display import display
     result = widgets.HTML()
 
     result.value = f"""
@@ -308,9 +311,6 @@ def numpy_module_p5():
         {message}
     </div>
     """
-
-    import ipywidgets as widgets
-    from IPython.display import display
 
     values = [
     [4, 6, 8, 10, 12],
