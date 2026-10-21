@@ -372,13 +372,28 @@ def numpy_module_p6():
 
     <p>
 
-    Upload a pdf of a diagram showing the axes for a two dimensional array. 
+    In the same table-like format, write down what a three dimensional array would look like, and specify three indexes of values within it. 
+    Also state the array's size, dimension, shape, and type. Please upload only a PDF. 
 
     </p>
     </div>
 
     """
-    
+        import ipywidgets as widgets
+    from IPython.display import display
+    result = widgets.HTML()
+
+    result.value = f"""
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
+        {message}
+    </div>
+    """
+    display(result)
+
     upload = widgets.FileUpload(
         accept='.pdf',
         multiple=False
