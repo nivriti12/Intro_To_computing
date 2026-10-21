@@ -379,7 +379,7 @@ def numpy_module_p6():
     </div>
 
     """
-        import ipywidgets as widgets
+    import ipywidgets as widgets
     from IPython.display import display
     result = widgets.HTML()
 
