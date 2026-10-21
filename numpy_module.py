@@ -244,7 +244,7 @@ def numpy_module_p4():
                 font-weight: bold;
                 font-size: 18px;
                 ">
-                    {value}
+                    {i}
                 </div>
                 """
             )
@@ -254,15 +254,15 @@ def numpy_module_p4():
 
     display(array_display)
 
-    message_2 = """ <p> Size: 10 </p> 
+message_2 = """ <p> Size: 10 </p> 
     <p> Dimension Size: 2 </p>
     <p> Shape: (2, 5) </p>
     <p> Type: int64 (meaning that it is an integer) </p>
     """
 
-    display(widgets.HTML(value=message_2))
+display(widgets.HTML(value=message_2))
 
-    display(array_display)
+display(array_display)
 
 
     
