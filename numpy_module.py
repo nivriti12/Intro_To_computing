@@ -224,16 +224,18 @@ def numpy_module_p4():
     <p>
     """
 
-    values = [[4, 6, 8, 10, 12], [4, 5, 2, 1, 5]]
+    values = [[4, 6, 8, 10, 12],
+          [4, 5, 2, 1, 5]]
 
+rows = []
+
+for value in values:
     boxes = []
-    
-    for value in values:
-        for i in value: 
-            
-            box = widgets.HTML(
-                value=f"""
-                <div style="
+
+    for i in value:
+        box = widgets.HTML(
+            value=f"""
+            <div style="
                 width: 70px;
                 height: 55px;
                 border: 1px solid gray;
@@ -243,16 +245,18 @@ def numpy_module_p4():
                 color: red;
                 font-weight: bold;
                 font-size: 18px;
-                ">
-                    {i}
-                </div>
-                """
-            )
-            boxes.append(box)
+            ">
+                {i}
+            </div>
+            """
+        )
 
-            array_display = widgets.HBox(boxes)
-            display(array_display)
+        boxes.append(box)
 
+    row = widgets.HBox(boxes)
+    rows.append(row)
+
+    
     message_2 = """ <p> Size: 10 </p> 
     <p> Dimension Size: 2 </p>
     <p> Shape: (2, 5) </p>
