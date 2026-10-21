@@ -209,4 +209,28 @@ def numpy_module_p3():
 
     display(response, submit, saved_answer)
 
+def numpy_module_p4():
+    import ipywidgets as widgets
+    from IPython.display import display
+    
+    message = """
+
+    <div style="line-height: 1.3;">
+
+    <p>
+
+    Upload a pdf of a diagram showing the axes for a two dimensional array. 
+
+    </p>
+    </div>
+
+    upload = widgets.FileUpload(
+        accept='.pdf',
+        multiple=False
+    )
+
+    display(upload)
+
+    
+
     
