@@ -187,7 +187,7 @@ def numpy_module_p3():
         {message}
     </div>
     """
-    
+    display(result)
 
     response = widgets.Textarea(
         placeholder="Enter your response here...",
@@ -237,6 +237,7 @@ def numpy_module_p4():
         {message}
     </div>
     """
+    display(result)
 
     values = [[4, 6, 8, 10, 12],
           [4, 5, 2, 1, 5]]
@@ -311,7 +312,7 @@ def numpy_module_p5():
         {message}
     </div>
     """
-
+    display(result)
     values = [
     [4, 6, 8, 10, 12],
     [4, 5, 2, 1, 5]
@@ -377,7 +378,7 @@ def numpy_module_p6():
     </div>
 
     """
-
+    
     upload = widgets.FileUpload(
         accept='.pdf',
         multiple=False
