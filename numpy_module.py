@@ -101,6 +101,8 @@ def numpy_module_p2():
     
     message = """
 
+    <div style="line-height: 1.3;">
+
     <p> Now, let's look at an actual array, and explore its characteristics. </p> 
 
     <p> This is an example of a 1-D array. Its <b> size </b> is the number of elements the array contains, in this case, five. 
@@ -108,7 +110,7 @@ def numpy_module_p2():
     per each axis, written in the form rows x columns (therefore applying to 2-D arrays). Lastly, its <b> type </b> is the type of elements in the 
     array. </p>
 
-
+    </div>
     """
 
     border = 'black'
@@ -158,3 +160,27 @@ def numpy_module_p2():
     """
 
     display(widgets.HTML(value=message_2))
+
+def numpy_module_p3():
+    message = """
+    <div style="line-height: 1.3;">
+
+    <p>
+
+    Brainstorm some potential applications of arrays, and write them down here (specifically where you would use an array over a list/tupple).
+
+    </p>
+    </div> 
+
+    """
+    import ipywidgets as widgets
+    from IPython.display import display
+
+    response = widgets.Textarea(
+        placeholder="Type your answer here...",
+        description="Answer:",
+        layout=widgets.Layout(width="100%", height="150px")
+    )
+
+    display(response)
+    
