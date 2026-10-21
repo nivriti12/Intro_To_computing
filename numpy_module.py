@@ -255,7 +255,8 @@ def numpy_module_p4():
 
         row = widgets.HBox(boxes)
         rows.append(row)
-
+    array_display = widgets.VBox(rows)
+    display(array_display)
     
     message_2 = """ <p> Size: 10 </p> 
     <p> Dimension Size: 2 </p>
