@@ -211,18 +211,17 @@ def numpy_module_p3():
 
 
 def numpy_module_p4():
-     message = """
-
+    message = """
     <div style="line-height: 1.3;">
 
     <p>
 
-    Now we will look at two dimensional arrays. They look as follows (below), and this example has almost all the same characteristics as 
-    the one dimensional one, except for it's dimension size (which is two). 
+    Now we will look at two dimensional arrays. They look as follows (below),
+    and this example has almost the one dimensional one, except for its
+    dimension size (which is two).
     </div>
 
     <p>
-
     """
 
     values = [[4, 6, 8, 10, 12], [4, 5, 2, 1, 5]]
