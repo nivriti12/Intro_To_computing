@@ -227,13 +227,13 @@ def numpy_module_p4():
     values = [[4, 6, 8, 10, 12],
           [4, 5, 2, 1, 5]]
 
-rows = []
+    rows = []
 
-for value in values:
-    boxes = []
+    for value in values:
+        boxes = []
 
-    for i in value:
-        box = widgets.HTML(
+        for i in value:
+            box = widgets.HTML(
             value=f"""
             <div style="
                 width: 70px;
@@ -249,12 +249,12 @@ for value in values:
                 {i}
             </div>
             """
-        )
+            )
 
-        boxes.append(box)
+            boxes.append(box)
 
-    row = widgets.HBox(boxes)
-    rows.append(row)
+        row = widgets.HBox(boxes)
+        rows.append(row)
 
     
     message_2 = """ <p> Size: 10 </p> 
