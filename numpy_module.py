@@ -262,8 +262,6 @@ message_2 = """ <p> Size: 10 </p>
 
 display(widgets.HTML(value=message_2))
 
-display(array_display)
-
 
     
 def numpy_module_p5():
