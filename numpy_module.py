@@ -209,7 +209,65 @@ def numpy_module_p3():
 
     display(response, submit, saved_answer)
 
+
 def numpy_module_p4():
+     message = """
+
+    <div style="line-height: 1.3;">
+
+    <p>
+
+    Now we will look at two dimensional arrays. They look as follows (below), and this example has almost all the same characteristics as 
+    the one dimensional one, except for it's dimension size (which is two). 
+    </div>
+
+    <p>
+
+    """
+
+    values = [[4, 6, 8, 10, 12], [4, 5, 2, 1, 5]]
+
+    boxes = []
+    
+    for value in values:
+        for i in value: 
+            
+            box = widgets.HTML(
+                value=f"""
+                <div style="
+                width: 70px;
+                height: 55px;
+                border: 1px solid gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: red;
+                font-weight: bold;
+                font-size: 18px;
+                ">
+                    {value}
+                </div>
+                """
+            )
+            boxes.append(box)
+
+    array_display = widgets.HBox(boxes)
+
+    display(array_display)
+
+    message_2 = """ <p> Size: 10 </p> 
+    <p> Dimension Size: 2 </p>
+    <p> Shape: (2, 5) </p>
+    <p> Type: int64 (meaning that it is an integer) </p>
+    """
+
+    display(widgets.HTML(value=message_2))
+
+    display(array_display)
+
+
+    
+def numpy_module_p5():
     import ipywidgets as widgets
     from IPython.display import display
     
