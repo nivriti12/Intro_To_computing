@@ -326,3 +326,149 @@ def numpy_module_4():
     display(widgets.HTML(value=message))
 
 
+def numpy_module_p5():
+
+    import ipywidgets as widgets
+    from IPython.display import display
+
+    values = [
+        [4, 6, 8, 10, 12],
+        [4, 5, 2, 1, 5]
+    ]
+
+    # Introduction and explanation
+    message = """
+    <div style="
+        font-family: Arial, sans-serif;
+        line-height: 1.5;
+    ">
+
+        <p>
+            The next concept to learn is <strong>indexing</strong>,
+            which allows you to access individual elements
+            within an array.
+        </p>
+
+        <p>
+            In a two-dimensional (2D) array, the elements
+            are arranged in <strong>rows and columns</strong>.
+            To access a specific element, you need to specify
+            its row position and column position.
+        </p>
+
+        <p>The general format is:</p>
+
+        <p style="font-family: monospace;">
+            array_name[row_position, column_position]
+        </p>
+
+        <p>
+            The first value identifies the <strong>row</strong>,
+            and the second identifies the <strong>column</strong>.
+        </p>
+
+        <p>
+            Take another look at the same 2D array from the
+            previous example. Click on each element to reveal
+            its index and see how its row and column positions
+            identify its location within the array.
+        </p>
+
+    </div>
+    """
+
+    introduction = widgets.HTML(value=message)
+
+    rows = []
+    all_buttons = []
+
+    # Output for the selected index
+    index_output = widgets.HTML(
+        value="<div style='min-height:25px;'></div>"
+    )
+
+    def button_clicked(button):
+
+        # Reset all button colors
+        for b in all_buttons:
+            b.style.button_color = "white"
+
+        # Highlight selected button
+        button.style.button_color = "yellow"
+
+        row_index, col_index = button.index
+
+        index_output.value = f"""
+        <div style="
+            color: #B8860B;
+            font-weight: bold;
+            font-family: monospace;
+            font-size: 16px;
+            margin-top: 12px;
+        ">
+            Index: ({row_index}, {col_index})
+        </div>
+        """
+
+    # Generate the interactive 2-D array
+    for row_index, row_values in enumerate(values):
+
+        boxes = []
+
+        for col_index, value in enumerate(row_values):
+
+            button = widgets.Button(
+                description=str(value),
+                layout=widgets.Layout(
+                    width="70px",
+                    height="55px",
+                    border="2px solid gray",
+                    margin="0 5px 0 0"
+                )
+            )
+
+            button.style.button_color = "white"
+            button.style.font_weight = "bold"
+            button.style.text_color = "red"
+
+            button.index = (row_index, col_index)
+
+            button.on_click(button_clicked)
+
+            boxes.append(button)
+            all_buttons.append(button)
+
+        row = widgets.HBox(
+            boxes,
+            layout=widgets.Layout(
+                margin="0 0 5px 0"
+            )
+        )
+
+        rows.append(row)
+
+    array_display = widgets.VBox(
+        rows,
+        layout=widgets.Layout(
+            margin="10px 0"
+        )
+    )
+
+    # Put everything inside one border
+    content = widgets.VBox(
+        [
+            introduction,
+            array_display,
+            index_output
+        ],
+        layout=widgets.Layout(
+            border="2px solid black",
+            padding="12px",
+            width="100%"
+        )
+    )
+
+    display(content)
+
+
+
