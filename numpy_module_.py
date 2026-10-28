@@ -108,7 +108,7 @@ def numpy_module_2():
             <strong>Type:</strong> {values.dtype}
         </p>
 
-        <p>The NumPy attributes used to identify these characteristics are:</p>
+        <p>The nummpy commands used to identify these characteristics are:</p>
 
         <p>
             <strong>Size:</strong> <code>array_name.size</code><br>
