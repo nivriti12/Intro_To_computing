@@ -74,35 +74,44 @@ get_ipython().register_magic_function(
 )
 
 
+
 def check_q1():
 
-    submission = _student_submissions.get("q1")
+    from IPython import get_ipython
+    import numpy as np
 
-    assert submission is not None, "No code submitted."
-    assert submission["error"] is None, "Code execution failed."
+    # Access the student's Jupyter notebook namespace
+    notebook = get_ipython().user_ns
 
-    # Check that an actual NumPy array was created
-    assert "fruits" in globals(), "Variable missing."
+    # Check that the student created the variable
+    assert "fruits" in notebook
 
-    fruits = globals()["fruits"]
+    fruits = notebook["fruits"]
 
+    # Check that it is a NumPy array
     assert isinstance(fruits, np.ndarray)
+
+    # Check dimensions and shape
     assert fruits.ndim == 1
     assert fruits.shape == (3,)
 
-    expected = np.array(
-        ["apples", "pears", "bananas"]
-    )
+    # Check contents and order
+    expected = np.array(["apples", "pears", "bananas"])
 
     assert np.array_equal(fruits, expected)
 
-    # Check that the array was printed correctly
+    # Retrieve the output captured by the student's code cell
+    submissions = notebook.get("_student_submissions", {})
+    submission = submissions.get("q1")
+
+    assert submission is not None
+    assert submission["error"] is None
+
+    # Check the actual printed output
     expected_output = np.array2string(expected)
 
-    assert (
-        submission["stdout"].strip()
-        == expected_output
-    )
+    assert submission["stdout"].strip() == expected_output
+
 
 
 def run_check(check_function):
