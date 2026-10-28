@@ -326,7 +326,7 @@ def numpy_module_4():
     display(widgets.HTML(value=message))
 
 
-def numpy_module_p5():
+def numpy_module_5():
 
     import ipywidgets as widgets
     from IPython.display import display
