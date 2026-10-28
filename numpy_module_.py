@@ -40,62 +40,65 @@ def numpy_module_1():
     display(result)
 
 
+
 def numpy_module_2():
 
     import numpy as np
     import ipywidgets as widgets
     from IPython.display import display
 
-    message = """
-    <div style="line-height: 1.3;">
-        <p>Below is an example of a 1-D array. Let's explore its characteristics.</p>
-    </div>
-    """
-
-    display(widgets.HTML(value=message))
-
     # Create a 1-D NumPy array
     values = np.array([4, 6, 8, 10, 12])
 
-    # Display each array element
-    boxes = []
+    # Generate the array boxes
+    boxes = ""
 
     for value in values:
-        box = widgets.HTML(
-            value=f"""
-            <div style="
-                width: 70px;
-                height: 55px;
-                border: 1px solid gray;
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                color: red;
-                font-weight: bold;
-                font-size: 18px;
-                box-sizing: border-box;
-            ">
-                {value}
-            </div>
-            """
-        )
-        boxes.append(box)
+        boxes += f"""
+        <div style="
+            width: 70px;
+            height: 55px;
+            border: 2px solid gray;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: red;
+            font-weight: bold;
+            font-size: 18px;
+            box-sizing: border-box;
+        ">
+            {value}
+        </div>
+        """
 
-    array_display = widgets.HBox(boxes)
-    display(array_display)
+    # Combine everything inside one border
+    message = f"""
+    <div style="
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 12px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+    ">
 
-    # Display the array characteristics
-    message_2 = f"""
-    <div style="line-height: 1.5;">
+        <p>Below is an example of a 1-D array. Let's explore its characteristics.</p>
+
+        <div style="
+            display: flex;
+            gap: 5px;
+            margin: 15px 0;
+        ">
+            {boxes}
+        </div>
 
         <p>
-        An array's <strong>size</strong> is the total number of elements it contains,
-        which in this case is five. Its <strong>number of dimensions</strong> is the
-        number of axes it has, which is one for a 1-D array. The <strong>shape</strong>
-        specifies the number of elements along each axis. For a 1-D array, the shape
-        contains one value, while for a 2-D array, it is written as (rows, columns).
-        Lastly, the <strong>data type</strong> identifies the type of elements stored
-        in the array.
+            An array's <strong>size</strong> is the total number of elements it contains,
+            which in this case is five. Its <strong>number of dimensions</strong> is the
+            number of axes it has, which is one for a 1-D array. The <strong>shape</strong>
+            specifies the number of elements along each axis. For a 1-D array, the shape
+            contains one value, while for a 2-D array, it is written as (rows, columns).
+            Lastly, the <strong>data type</strong> identifies the type of elements stored
+            in the array.
         </p>
 
         <p>
@@ -116,31 +119,23 @@ def numpy_module_2():
 
         <p><strong>Example:</strong> Print the size of the array below.</p>
 
-        <div style="font-family: monospace; line-height: 1.6;">
+        <div style="
+            font-family: monospace;
+            line-height: 1.6;
+        ">
             <p>v1 = np.array([7, 2, 9, 10])</p>
             <p>print(v1.size)</p>
         </div>
 
         <div style="
             color: #B8860B;
-            font-family: monospace;
-            line-height: 1.6;
+            font-weight: bold;
             margin-top: 5px;
         ">
-            <strong>Output:</strong> 4
+            4
         </div>
 
     </div>
     """
 
-    border = "black"
-
-    result = widgets.HTML(
-        value=f"""
-        <div style="padding:10px; border:2px solid {border}; border-radius:6px;">
-            {message_2}
-        </div>
-        """
-    )
-
-    display(result)
+    display(widgets.HTML(value=message))
