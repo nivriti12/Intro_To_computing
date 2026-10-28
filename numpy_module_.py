@@ -223,3 +223,109 @@ def numpy_module_3():
 
     display(widgets.HTML(value=message))
 
+
+def numpy_module_4():
+
+    import ipywidgets as widgets
+    from IPython.display import display
+    from html import escape
+
+    # Format Python code without changing comment colors
+    def code(text):
+        return f"""
+        <div style="
+            font-family: monospace;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            margin: 8px 0;
+            color: black;
+        ">{escape(text)}</div>
+        """
+
+    # Format outputs in golden-brown
+    def output(text):
+        return f"""
+        <div style="
+            font-family: monospace;
+            white-space: pre-wrap;
+            line-height: 1.6;
+            color: #B8860B;
+            font-weight: bold;
+            margin: 5px 0 12px 0;
+        ">{escape(text)}</div>
+        """
+
+    message = f"""
+    <div style="
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 12px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+    ">
+
+        <p>
+            In order to make an array, you have to
+            import NumPy as follows:
+        </p>
+
+        {code("import numpy as np")}
+
+        <p>
+            Following this, you can create one
+            with the following command:
+        </p>
+
+        {code("np.array([elements])")}
+
+        <p>Here are a few examples of array creation:</p>
+
+        <p><strong>1. Using a list to make an array:</strong></p>
+
+        {code("L1=[7.2,2,9,10]\nv1=np.array(L1)\nprint(v1)")}
+
+        {output("[ 7.2  2.   9.  10. ]")}
+
+        <p><strong>2. Attempting to make a homogeneous array:</strong></p>
+
+        {code("L1=[7.2,2,9,10,'pop']\nv1=np.array(L1)\nprint(v1)")}
+
+        {output("['7.2' '2' '9' '10' 'pop']")}
+
+        {code("print(v1.dtype)")}
+
+        {output("<U32")}
+
+        <p>
+            # Unicode string: all elements were converted
+            to strings instead of some remaining floats.
+        </p>
+
+        <p><strong>3. Using the range function to make an array:</strong></p>
+
+        {code("L1=list(range(10))")}
+
+        {output("[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]")}
+
+        {code("v1=np.arange(10)")}
+
+        {output("[0 1 2 3 4 5 6 7 8 9]")}
+
+        <p><strong>4. Using list comprehension to make an array:</strong></p>
+
+        {code("L2=[i**3 for i in L1]\nprint(L2)")}
+
+        {output("[0, 1, 8, 27, 64, 125, 216, 343, 512, 729]")}
+
+        <p><strong>5. Creating a 2-D array with two lists:</strong></p>
+
+        {code("L2=[[5.2,3,4],[9.1,0.1,0.3]]\nM=np.array(L2) #converts a list of lists to a 2D array\nprint(M)")}
+
+        {output("[[5.2 3.  4. ]\n [9.1 0.1 0.3]]")}
+
+    </div>
+    """
+
+    display(widgets.HTML(value=message))
+
+
