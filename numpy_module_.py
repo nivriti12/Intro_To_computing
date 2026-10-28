@@ -132,7 +132,7 @@ def numpy_module_2():
             font-weight: bold;
             margin-top: 5px;
         ">
-            4 </div> #output
+            4 </div>
     </div>
     """
 
@@ -295,11 +295,8 @@ def numpy_module_4():
         {code("print(v1.dtype)")}
 
         {output("<U32")}
-
-        <p>
             # Unicode string: all elements were converted
             to strings instead of some remaining floats.
-        </p>
 
         <p><strong>3. Using the range function to make an array:</strong></p>
 
