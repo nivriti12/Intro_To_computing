@@ -141,3 +141,89 @@ def numpy_module_2():
     """
 
     display(widgets.HTML(value=message))
+
+    
+def numpy_module_3():
+
+    import numpy as np
+    import ipywidgets as widgets
+    from IPython.display import display
+
+    # Create a 2-D NumPy array
+    values = np.array([
+        [4, 6, 8, 10, 12],
+        [14, 16, 18, 20, 22]
+    ])
+
+    # Generate the array boxes
+    rows = ""
+
+    for row in values:
+        boxes = ""
+
+        for value in row:
+            boxes += f"""
+            <div style="
+                width: 70px;
+                height: 55px;
+                border: 2px solid gray;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                color: red;
+                font-weight: bold;
+                font-size: 18px;
+                box-sizing: border-box;
+            ">
+                {value}
+            </div>
+            """
+
+        rows += f"""
+        <div style="display: flex; gap: 5px;">
+            {boxes}
+        </div>
+        """
+
+    # Combine everything inside one border
+    message = f"""
+    <div style="
+        border: 2px solid black;
+        border-radius: 6px;
+        padding: 12px;
+        line-height: 1.5;
+        font-family: Arial, sans-serif;
+    ">
+
+        <p>
+            Now, let's look at two-dimensional arrays.
+            As shown below, a 2-D array is similar to a
+            1-D array, but it has two dimensions instead
+            of one. Notice how its shape and dimension
+            size differ from those of a 1-D array.
+            NumPy also supports arrays with more than
+            two dimensions, although they become harder
+            to visualize beyond three dimensions.
+        </p>
+
+        <div style="
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            margin: 15px 0;
+        ">
+            {rows}
+        </div>
+
+        <p>
+            <strong>Size:</strong> {values.size}<br>
+            <strong>Dimension Size:</strong> {values.ndim}<br>
+            <strong>Shape:</strong> {values.shape}<br>
+            <strong>Type:</strong> {values.dtype}
+        </p>
+
+    </div>
+    """
+
+    display(widgets.HTML(value=message))
+
