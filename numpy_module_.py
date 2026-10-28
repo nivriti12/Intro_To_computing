@@ -11,12 +11,12 @@ def numpy_module_1():
         <p>NumPy (Numerical Python) is a Python library designed for working with numerical data.
         It is widely used in scientific computing, data analysis, and machine learning.</p>
 
-        <p>Using Python, you can create N-dimensional arrays, which have a fixed size and
-        typically contain elements of a single data type. For example, you could have an
+        <p>Using Python, you can create N-dimensional arrays, which have a fixed size (<b> immutable </b>) and
+         contain elements of a single data type (<b> homogenous </b>). For example, you could have an
         array containing only strings or one containing only integers, rather than mixing
         strings and integers in a standard numerical array. In contrast, Python lists can
-        change in size and can contain different data types. Tuples have a fixed size but
-        can also contain different data types.</p>
+        change in size (<b> mutable </b> and can contain different data types (<b> heterogenous </b>). Tuples have a fixed size (<b> immutable </b>) but
+        can also contain different data types (<b> heterogenous </b>).</p>
 
         <p>NumPy also offers powerful mathematical functions for operating on arrays
         containing numbers.</p>
