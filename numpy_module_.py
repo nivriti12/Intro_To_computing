@@ -294,9 +294,8 @@ def numpy_module_4():
 
         {code("print(v1.dtype)")}
 
-        {output("<U32")}
-            # Unicode string: all elements were converted
-            to strings instead of some remaining floats.
+        {output("<U32  # Unicode string: all elements were converted
+            to strings instead of some remaining floats.")}
 
         <p><strong>3. Using the range function to make an array:</strong></p>
 
