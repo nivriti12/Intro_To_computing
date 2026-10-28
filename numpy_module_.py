@@ -265,7 +265,7 @@ def numpy_module_4():
     ">
 
         <p>
-            In order to make an array, you have to
+            Now let's look at how to create an array using numpy. In order to make an array, you have to
             import NumPy as follows:
         </p>
 
