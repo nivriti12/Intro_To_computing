@@ -132,11 +132,7 @@ def numpy_module_2():
             font-weight: bold;
             margin-top: 5px;
         ">
-            4 
-        </div>
-
-        #output
-
+            4 </div> #output
     </div>
     """
 
