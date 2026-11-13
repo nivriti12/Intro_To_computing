@@ -75,7 +75,7 @@ def numpy_module_in_class_activity():
     four vibration sensors: each row is a measurement and each column is a sensor. The data can be seen below.
     </p>
     <p>
-    The file sensors.dat has already been loaded into a variable called data. Using this variable, load sensors.dat into numpy. 
+    The file sensors.dat has already been loaded into a variable called data, which you should use for the rest of the activity.  
 
     {grid}
 
