@@ -1,10 +1,11 @@
-def numpy_module_in_class_activity():
-    import numpy as np
-    import ipywidgets as widgets
-    from IPython.display import display
+import urllib.request
+import numpy as np
+import ipywidgets as widgets
+from IPython.display import display
 
+
+def numpy_module_in_class_activity():
     # ---- Load the data ----
-    import urllib.request
     url = "https://raw.githubusercontent.com/nivriti12/Intro_To_computing/refs/heads/main/sensors.dat"
     lines = urllib.request.urlopen(url).read().decode().splitlines()
     data = np.loadtxt(lines, delimiter=",")
@@ -68,14 +69,15 @@ def numpy_module_in_class_activity():
     <div style="line-height: 1.3;">
 
     <p>
-
-    In Class Activity 18: 
+    In Class Activity 18:
     This activity will use file sensors.dat,
-    which contains 32 simulated voltage measurements (V) from 
+    which contains 32 simulated voltage measurements (V) from
     four vibration sensors: each row is a measurement and each column is a sensor. The data can be seen below.
     </p>
+
     <p>
-    The file sensors.dat has already been loaded into a variable called data, which you should use for the rest of the activity.  
+    The file sensors.dat has already been loaded into a variable called data, which you should use for the rest of the activity.
+    </p>
 
     {grid}
 
@@ -95,17 +97,18 @@ def numpy_module_in_class_activity():
     """
     display(result)
 
+    # Hand the data back so the notebook can store it in a variable
+    return data
+
+
 def numpy_2():
-        message = f"""
+    message = """
     <div style="line-height: 1.3;">
 
     <p>
-
-    Q1) Use np.mean() and np.std() to calculate the mean and 
-    standard deviation for each sensor. Store the results in mean_voltage and std_voltage, and print both arrays. Use the appropriate axis.​  
+    Q1) Use np.mean() and np.std() to calculate the mean and
+    standard deviation for each sensor. Store the results in mean_voltage and std_voltage, and print both arrays. Use the appropriate axis.
     </p>
-    
-    {grid}
 
     </div>
     """
@@ -122,5 +125,3 @@ def numpy_2():
     </div>
     """
     display(result)
-
-    
