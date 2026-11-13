@@ -4,7 +4,10 @@ def numpy_module_in_class_activity():
     from IPython.display import display
 
     # ---- Load the data ----
-    data = np.loadtxt("sensors.dat", delimiter=",")
+    import urllib.request
+    url = "https://raw.githubusercontent.com/nivriti12/Intro_To_computing/refs/heads/main/sensors.dat"
+    lines = urllib.request.urlopen(url).read().decode().splitlines()
+    data = np.loadtxt(lines, delimiter=",")
     n_rows, n_cols = data.shape
 
     # How many rows to show at the top and bottom
