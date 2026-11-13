@@ -35,10 +35,7 @@ def numpy_module_q1():
     <b>mean voltage</b> across all of the measurements and sensors.
     Store your result in a variable called <code>mean_value</code>.
     </p>
-    <p>
-    Then run <code>check_q2(mean_value)</code> to check your answer.
-    You have <b>3 attempts</b>.
-    </p>
+
     </div>
     """
     _show(message, "black")
