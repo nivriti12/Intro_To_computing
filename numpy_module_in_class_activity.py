@@ -69,10 +69,13 @@ def numpy_module_in_class_activity():
 
     <p>
 
-    Download sensors.dat from Canvas.
+    In Class Activity 18: 
     This activity will use file sensors.dat,
-    which contains 32 simulated voltage measurements (V) from four vibration sensors: each row is a measurement and each column is a sensor.
+    which contains 32 simulated voltage measurements (V) from 
+    four vibration sensors: each row is a measurement and each column is a sensor. The data can be seen below.
     </p>
+    <p>
+    The file sensors.dat has already been loaded into a variable called data. Using this variable, load sensors.dat into numpy. 
 
     {grid}
 
@@ -91,3 +94,5 @@ def numpy_module_in_class_activity():
     </div>
     """
     display(result)
+
+    
