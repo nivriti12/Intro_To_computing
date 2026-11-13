@@ -95,4 +95,32 @@ def numpy_module_in_class_activity():
     """
     display(result)
 
+def numpy_2():
+        message = f"""
+    <div style="line-height: 1.3;">
+
+    <p>
+
+    Q1) Use np.mean() and np.std() to calculate the mean and 
+    standard deviation for each sensor. Store the results in mean_voltage and std_voltage, and print both arrays. Use the appropriate axis.​  
+    </p>
+    
+    {grid}
+
+    </div>
+    """
+
+    result = widgets.HTML()
+
+    result.value = f"""
+    <div style="
+        padding:10px;
+        border:2px solid black;
+        border-radius:6px;
+    ">
+        {message}
+    </div>
+    """
+    display(result)
+
     
